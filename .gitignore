@@ -172,3 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+#Google auth secret key 
+secure_access_flow/settings.py
+db.sqlite3
+.env 

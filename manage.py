@@ -2,16 +2,19 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
 
 
 def main():
     """Run administrative tasks."""
-    # Add the project root directory to the Python path
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    sys.path.insert(0, BASE_DIR)
+    # Get the project root directory
+    BASE_DIR = Path(__file__).resolve().parent
 
-    # Use the correct settings module
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
+    # Add the project root directory to the Python path
+    sys.path.insert(0, str(BASE_DIR))
+
+    # Set the Django settings module
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.heroku_settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -6,6 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # Add the project directory to the Python path
+    project_path = os.path.dirname(os.path.abspath(__file__))
+    if project_path not in sys.path:
+        sys.path.insert(0, project_path)
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
     try:
         from django.core.management import execute_from_command_line

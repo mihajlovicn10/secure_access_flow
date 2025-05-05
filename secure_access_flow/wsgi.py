@@ -10,10 +10,9 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 import os
 import sys
 
-# Add the project directory to the Python path
-project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if project_path not in sys.path:
-    sys.path.insert(0, project_path)
+# Add the project root directory to the Python path
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
 

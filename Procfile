@@ -1,1 +1,1 @@
-web: cd secure_access_flow && gunicorn wsgi:application --log-file - 
+web: gunicorn secure_access_flow.wsgi:application --log-file - 

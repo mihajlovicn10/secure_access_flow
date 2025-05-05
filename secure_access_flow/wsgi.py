@@ -14,7 +14,8 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, BASE_DIR)
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
+# Use Heroku-specific settings
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.heroku_settings')
 
 from django.core.wsgi import get_wsgi_application
 

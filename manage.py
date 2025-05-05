@@ -10,6 +10,7 @@ def main():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, BASE_DIR)
 
+    # Use the correct settings module
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
     try:
         from django.core.management import execute_from_command_line

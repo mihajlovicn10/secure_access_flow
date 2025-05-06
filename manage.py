@@ -14,7 +14,7 @@ def main():
     sys.path.insert(0, str(BASE_DIR))
 
     # Set the Django settings module
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.heroku_settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

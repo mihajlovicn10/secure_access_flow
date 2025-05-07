@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-y-&3j6e(f7#&!n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['secure-access-flow-new-b00282cd4380.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*.railway.app', '127.0.0.1']
 
 
 # Application definition

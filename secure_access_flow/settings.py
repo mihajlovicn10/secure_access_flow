@@ -69,6 +69,8 @@ LOGOUT_REDIRECT_URL = 'home'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile']
 SOCIAL_AUTH_GOOGLE_OAUTH2_AUTH_EXTRA_ARGUMENTS = {'access_type': 'offline'}
 
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # Add whitenoise middleware
@@ -181,4 +183,3 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 X_FRAME_OPTIONS = 'DENY' 
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = True

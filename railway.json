@@ -1,0 +1,5 @@
+{
+    "build": {
+      "postBuildCommand": "python manage.py migrate --noinput"
+    }
+  }

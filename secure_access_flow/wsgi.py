@@ -19,4 +19,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'secure_access_flow.settings')
 
 from django.core.wsgi import get_wsgi_application
 
+os.system('python manage.py migrate --noinput')
+
 application = get_wsgi_application()

@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-y-&3j6e(f7#&!n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['https://secureaccessflow-production.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['secureaccessflow-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'auth_demo', 
-    'whitenoise.runserver_nostatic',  # Add whitenoise
+    'whitenoise.runserver_nostatic',  
 ]
 
 AUTHENTICATION_BACKENDS = [

@@ -15,6 +15,7 @@ import os
 from dotenv import load_dotenv
 import dj_database_url
 import logging
+import json 
 
 # Load environment variables from .env file
 load_dotenv()
@@ -68,10 +69,7 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile']
-SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_ARGUMENTS = {
-    'access_type': 'offline',
-    'prompt': 'select_account consent',
-}
+SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_ARGUMENTS = json.loads(os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_ARGUMENTS', '{}'))
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
 
@@ -166,21 +164,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'INFO',
-    },
-}   
-
+  
 # Security settings
 SECURE_SSL_REDIRECT = os.getenv("SECURE_SSL_REDIRECT", "False") == "True"
 SESSION_COOKIE_SECURE = True

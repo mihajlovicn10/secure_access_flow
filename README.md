@@ -79,3 +79,10 @@ secure_access_flow/
 └── requirements.txt
 🤝 License
 This project is open source and available under the MIT License.
+
+💬 Author
+Developed by Half-Half Man,
+Synthesis of Code and Water.
+
+🔗 Portfolio Website - TBA
+📧 nmihajlovic.dev@gmail.com
